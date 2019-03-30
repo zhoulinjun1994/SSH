@@ -69,6 +69,10 @@ if __name__ == "__main__":
     start = time.clock()
     # Perform detection
     cls_dets,_ = detect(net,args.im_path,visualization_folder=args.out_path,visualize=False,pyramid=pyramid)
+
+    # For large image, we use a sliding window L_size * W_size to divide and conquer the original
+    # image. Finally, we use Non-Maximum Suppression to delete the overlap bbox.
+    # The sliding window size is 1/9 of original image.
     im = cv2.imread(args.im_path)
     L_block = 3
     W_block = 3
