@@ -69,7 +69,7 @@ and ```db_name``` would be ```wider_train``` in this case).
 
 
 ### Testing
-For testing the model, you need to put the image in folder ```data/demo/``
+For testing the model, you need to put the image in folder ```data/demo/```
 
 Then, testing the model with:
 
