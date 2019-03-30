@@ -54,7 +54,7 @@ def _get_image_blob(im,im_scales):
     return blobs
 
 
-def visusalize_detections(im, bboxes, plt_name='output', ext='.png', visualization_folder=None, thresh=0.5):
+def visusalize_detections(im, bboxes, plt_name='output', ext='.jpg', visualization_folder=None, thresh=0.6):
     """
     A function to visualize the detections
     :param im: The image
@@ -66,8 +66,13 @@ def visusalize_detections(im, bboxes, plt_name='output', ext='.png', visualizati
     """
     inds = np.where(bboxes[:, -1] >= thresh)[0]
     bboxes = bboxes[inds]
-    fig, ax = plt.subplots(figsize=(12, 12))
-
+    length = im.shape[1] / 96.0
+    width = im.shape[0] / 96.0
+    fig, ax = plt.subplots(figsize=(length, width), dpi=96)
+    plt.gca().xaxis.set_major_locator(plt.NullLocator())
+    plt.gca().yaxis.set_major_locator(plt.NullLocator())
+    plt.subplots_adjust(top=1,bottom=0,left=0,right=1,hspace=0,wspace=0)
+    plt.margins(0,0)
 
     if im.shape[0] == 3:
         im_cp = im.copy()
@@ -89,9 +94,9 @@ def visusalize_detections(im, bboxes, plt_name='output', ext='.png', visualizati
                 plt.Rectangle((bbox[0], bbox[1]),
                               bbox[2] - bbox[0],
                               bbox[3] - bbox[1], fill=False,
-                              edgecolor=(0, bbox[4], 0), linewidth=3)
+                              edgecolor=(0, bbox[4], 0), linewidth=2)
             )
-	   
+
 
     plt.axis('off')
     plt.tight_layout()
