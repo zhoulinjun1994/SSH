@@ -69,7 +69,7 @@ and ```db_name``` would be ```wider_train``` in this case).
 
 
 ### Testing
-For testing the model, you need to put the image in folder data/demo/
+For testing the model, you need to put the image in folder ```data/demo/``
 
 Then, testing the model with:
 
@@ -78,4 +78,4 @@ python demo.py
 ```
 
 The program will give the execution time and the final face number.
-For a test image and its corresponding result, we give a test.jpg under data/demo/.
+For a test image and its corresponding result, we give a test.jpg under ```data/demo/```.
