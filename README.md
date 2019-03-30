@@ -1,7 +1,7 @@
 # SSH: Single Stage Headless Face Detector
 
 ## Introduction
-This repository includes the code for training and evaluating the *SSH* face detector introduced in our [**ICCV 2017 paper**](https://arxiv.org/abs/1708.03979).
+This repository includes the code for training and evaluating the *SSH* face detector introduced in [**ICCV 2017 paper**](https://arxiv.org/abs/1708.03979).
 We improve the original algorithm and support large image. For original code, please refer to https://github.com/mahyarnajibi/SSH.
 
 ### Citing
@@ -78,4 +78,4 @@ python demo.py
 ```
 
 The program will give the execution time and the final face number.
-For a test image and its corresponding result, we give a test.jpg under ```data/demo/```.
+For a test image and its corresponding result, we give a ```test.jpg``` under ```data/demo/```.
