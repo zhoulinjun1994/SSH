@@ -1,5 +1,8 @@
 env/
 output/
-data/
+data/cache/
+data/datasets/
+data/imagenet_models/
+data/SSH_models/
 caffe/.build_release
 *.pyc
