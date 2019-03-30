@@ -1,0 +1,2 @@
+Execution time: 32s
+Face Num: 666

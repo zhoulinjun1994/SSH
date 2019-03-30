@@ -79,3 +79,4 @@ python demo.py
 
 The program will give the execution time and the final face number.
 For a test image and its corresponding result, we give a ```test.jpg``` under ```data/demo/```.
+The result is shown in ```test_detections_SSH.jpg``` and ```test_result.txt```
